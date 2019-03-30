@@ -20,30 +20,50 @@ namespace GraMonolitycznie
             //1.komputer losuje liczbe
             Random generator = new Random();
             int wylosowana = generator.Next(1, 101);
-            Console.WriteLine("Wylosowałem liczbe od 1 do 100, \n Odgadnij ją" );
+            Console.WriteLine("Wylosowałem liczbe od 1 do 100, \n Odgadnij ją");
 #if(DEBUG)
             Console.WriteLine(wylosowana);
 #endif
 
-            //2.czlowiek proponuje roziwazanie
+            //wykonuj
+            bool trafiono = false; //wartownik (zwany czasami flagą)
+            do
+            {
+                #region Krok 2.czlowiek proponuje roziwazanie
+                Console.Write("Podaj swoją propozycję: ");
+                string tekst = Console.ReadLine();
+                if (tekst.ToLower = 'x') //trzeba porpawić aby wychodziło z gry po wpisaniu klawisza x
+                int propozycja = 0;
+                try
+                {
+                    propozycja = Convert.ToInt32(tekst);
+                }
+                catch (FormatException)
+                {
+                    Console.WriteLine("Nie podano liczby");
+                }
+                catch (OverflowException)
+                {
+                    Console.WriteLine("Liczba nie mieści się w rejestrze");
+                }
 
-            Console.Write("Podaj swoją propozycję: ");
-            string tekst = Console.ReadLine();
-            int propozycja = Convert.ToInt32(tekst);
-            Console.WriteLine($"Przyjąłem wartość {propozycja}" );
+                Console.WriteLine($"Przyjąłem wartość {propozycja}");
+                #endregion
 
-
-
-            //3.komputer ocenia propozycje,
-            if (propozycja<wylosowana)
-                Console.WriteLine("Za mało");
-            else if(propozycja > wylosowana)
-                Console.WriteLine("Za dużo");
-            else
-                Console.WriteLine("Trafiono");
-
-
-
+                #region Krok 3.komputer ocenia propozycje,
+                if (propozycja < wylosowana)
+                    Console.WriteLine("Za mało");
+                else if (propozycja > wylosowana)
+                    Console.WriteLine("Za dużo");
+                else
+                {
+                    Console.WriteLine("Trafiono");
+                    trafiono = true;
+                }
+                #endregion
+            }
+            while (!trafiono);
+//do momentu trafienia
             Console.WriteLine("Koniec gry");
             string a = Console.ReadLine();
         }
