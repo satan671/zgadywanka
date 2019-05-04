@@ -32,7 +32,9 @@ namespace GraMonolitycznie
                 #region Krok 2.czlowiek proponuje roziwazanie
                 Console.Write("Podaj swoją propozycję: ");
                 string tekst = Console.ReadLine();
-                if (tekst.ToLower = 'x') //trzeba porpawić aby wychodziło z gry po wpisaniu klawisza x
+                if (tekst.ToLower() == "x") //trzeba porpawić aby wychodziło z gry po wpisaniu klawisza x
+                break;
+
                 int propozycja = 0;
                 try
                 {
@@ -41,10 +43,13 @@ namespace GraMonolitycznie
                 catch (FormatException)
                 {
                     Console.WriteLine("Nie podano liczby");
+                    continue;
                 }
                 catch (OverflowException)
                 {
                     Console.WriteLine("Liczba nie mieści się w rejestrze");
+                    continue;
+
                 }
 
                 Console.WriteLine($"Przyjąłem wartość {propozycja}");
