@@ -47,7 +47,13 @@ namespace GraGui
 
         private void Sprawdz_Click(object sender, EventArgs e)
         {
+            int sprawdzana = int.Parse(textBoxSprawdzana.Text);
+           // g.Ocena(sprawdzana);
 
+
+
+            Odpowiedz.Text = $"Odpowiedź: {g.Ocena(sprawdzana)}"; // do zrobienia odpowiedź
+            
         }
 
         private void TextBoxZakresOd_TextChanged(object sender, EventArgs e)

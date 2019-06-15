@@ -41,7 +41,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.Sprawdz = new System.Windows.Forms.Button();
             this.Odpowiedz = new System.Windows.Forms.Label();
-            this.Sprawdzana = new System.Windows.Forms.TextBox();
+            this.textBoxSprawdzana = new System.Windows.Forms.TextBox();
             this.panel_sprawdz = new System.Windows.Forms.Panel();
             this.Wylosowana = new System.Windows.Forms.Label();
             this.Liczba_ruchow = new System.Windows.Forms.Label();
@@ -183,16 +183,16 @@
             this.Odpowiedz.TabIndex = 3;
             this.Odpowiedz.Text = "Odpowiedź";
             // 
-            // Sprawdzana
+            // textBoxSprawdzana
             // 
-            this.Sprawdzana.Location = new System.Drawing.Point(21, 38);
-            this.Sprawdzana.Name = "Sprawdzana";
-            this.Sprawdzana.Size = new System.Drawing.Size(100, 20);
-            this.Sprawdzana.TabIndex = 2;
+            this.textBoxSprawdzana.Location = new System.Drawing.Point(21, 38);
+            this.textBoxSprawdzana.Name = "textBoxSprawdzana";
+            this.textBoxSprawdzana.Size = new System.Drawing.Size(100, 20);
+            this.textBoxSprawdzana.TabIndex = 2;
             // 
             // panel_sprawdz
             // 
-            this.panel_sprawdz.Controls.Add(this.Sprawdzana);
+            this.panel_sprawdz.Controls.Add(this.textBoxSprawdzana);
             this.panel_sprawdz.Controls.Add(this.Odpowiedz);
             this.panel_sprawdz.Controls.Add(this.Sprawdz);
             this.panel_sprawdz.Controls.Add(this.label3);
@@ -267,7 +267,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button Sprawdz;
         private System.Windows.Forms.Label Odpowiedz;
-        private System.Windows.Forms.TextBox Sprawdzana;
+        private System.Windows.Forms.TextBox textBoxSprawdzana;
         private System.Windows.Forms.Panel panel_sprawdz;
         private System.Windows.Forms.Label Wylosowana;
         private System.Windows.Forms.Label Liczba_ruchow;
