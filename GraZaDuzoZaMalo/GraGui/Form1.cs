@@ -14,6 +14,7 @@ namespace GraGui
     public partial class Form1 : Form
     {
         private Gra g;
+        DateTime CzasStart = DateTime.Now;
         public Form1()
         {
             InitializeComponent();
@@ -34,8 +35,9 @@ namespace GraGui
             groupBoxLosowanie.Visible = true;
         }
 
-        private void buttonLosuj_Click(object sender, EventArgs e)
-        {   
+        public void buttonLosuj_Click(object sender, EventArgs e)
+        {
+            DateTime CzasStart = DateTime.Now;
             //try-catch
             int zakresOd = int.Parse(textBoxZakresOd.Text);
             int zakresDo = int.Parse(textBoxZakresDo.Text);
@@ -64,11 +66,18 @@ namespace GraGui
         private void Przerwij_Click(object sender, EventArgs e)
         {
             g.Poddaj();
+            Koniec_gry();
+
+        }
+
+        public void Koniec_gry()
+        {
+            DateTime CzasStop = DateTime.Now;
+            TimeSpan CzasGry = (CzasStop - CzasStart);
             Wylosowana.Text = $"Wylosowana: {g.CoBylWylosowane()}";
             Liczba_ruchow.Text = $"Liczba ruchów: {g.LicznikRuchow}";
-            Laczny_czas_gry.Text = $"Łączny czas gry: "; // do zrobienia timer
+            Laczny_czas_gry.Text = $"Łączny czas gry: {CzasGry}"; // do poprawienia
             panel_odpowiedz.Visible = true;
-
         }
 
         private void Historia_Click(object sender, EventArgs e)
