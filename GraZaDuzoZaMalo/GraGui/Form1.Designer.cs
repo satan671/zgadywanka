@@ -30,11 +30,11 @@
         {
             this.buttonNowaGra = new System.Windows.Forms.Button();
             this.groupBoxLosowanie = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBoxZakresOd = new System.Windows.Forms.TextBox();
-            this.textBoxZakresDo = new System.Windows.Forms.TextBox();
             this.buttonLosuj = new System.Windows.Forms.Button();
+            this.textBoxZakresDo = new System.Windows.Forms.TextBox();
+            this.textBoxZakresOd = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBoxLosowanie.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,14 +64,32 @@
             this.groupBoxLosowanie.Visible = false;
             this.groupBoxLosowanie.Enter += new System.EventHandler(this.groupBoxLosowanie_Enter);
             // 
-            // label1
+            // buttonLosuj
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(57, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Zakres Od";
+            this.buttonLosuj.Location = new System.Drawing.Point(138, 62);
+            this.buttonLosuj.Name = "buttonLosuj";
+            this.buttonLosuj.Size = new System.Drawing.Size(75, 23);
+            this.buttonLosuj.TabIndex = 4;
+            this.buttonLosuj.Text = "Wylosuj";
+            this.buttonLosuj.UseVisualStyleBackColor = true;
+            this.buttonLosuj.Click += new System.EventHandler(this.buttonLosuj_Click);
+            // 
+            // textBoxZakresDo
+            // 
+            this.textBoxZakresDo.Location = new System.Drawing.Point(69, 90);
+            this.textBoxZakresDo.Name = "textBoxZakresDo";
+            this.textBoxZakresDo.Size = new System.Drawing.Size(48, 20);
+            this.textBoxZakresDo.TabIndex = 3;
+            this.textBoxZakresDo.Text = "100";
+            // 
+            // textBoxZakresOd
+            // 
+            this.textBoxZakresOd.Location = new System.Drawing.Point(69, 43);
+            this.textBoxZakresOd.Name = "textBoxZakresOd";
+            this.textBoxZakresOd.Size = new System.Drawing.Size(48, 20);
+            this.textBoxZakresOd.TabIndex = 2;
+            this.textBoxZakresOd.Text = "1";
+            this.textBoxZakresOd.TextChanged += new System.EventHandler(this.TextBoxZakresOd_TextChanged);
             // 
             // label2
             // 
@@ -82,29 +100,14 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "ZakresDo";
             // 
-            // textBoxZakresOd
+            // label1
             // 
-            this.textBoxZakresOd.Location = new System.Drawing.Point(69, 43);
-            this.textBoxZakresOd.Name = "textBoxZakresOd";
-            this.textBoxZakresOd.Size = new System.Drawing.Size(48, 20);
-            this.textBoxZakresOd.TabIndex = 2;
-            // 
-            // textBoxZakresDo
-            // 
-            this.textBoxZakresDo.Location = new System.Drawing.Point(69, 90);
-            this.textBoxZakresDo.Name = "textBoxZakresDo";
-            this.textBoxZakresDo.Size = new System.Drawing.Size(48, 20);
-            this.textBoxZakresDo.TabIndex = 3;
-            // 
-            // buttonLosuj
-            // 
-            this.buttonLosuj.Location = new System.Drawing.Point(138, 62);
-            this.buttonLosuj.Name = "buttonLosuj";
-            this.buttonLosuj.Size = new System.Drawing.Size(75, 23);
-            this.buttonLosuj.TabIndex = 4;
-            this.buttonLosuj.Text = "Wylosuj";
-            this.buttonLosuj.UseVisualStyleBackColor = true;
-            this.buttonLosuj.Click += new System.EventHandler(this.buttonLosuj_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(6, 43);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(57, 13);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Zakres Od";
             // 
             // Form1
             // 

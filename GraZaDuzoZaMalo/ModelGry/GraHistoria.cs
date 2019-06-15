@@ -7,8 +7,8 @@ namespace ModelGry
     public partial class Gra
     {
         // historia gry
-        public List<Ruch> historia = new List<Ruch>();
-        
+        public List<Ruch> Historia;
+
         //inner class
         public class Ruch
         {

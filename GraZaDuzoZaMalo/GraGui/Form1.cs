@@ -41,5 +41,10 @@ namespace GraGui
             int zakresDo = int.Parse(textBoxZakresDo.Text);
             g = new Gra(zakresOd, zakresDo);
         }
+
+        private void TextBoxZakresOd_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
