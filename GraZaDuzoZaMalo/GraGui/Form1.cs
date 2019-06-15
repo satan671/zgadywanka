@@ -40,11 +40,35 @@ namespace GraGui
             int zakresOd = int.Parse(textBoxZakresOd.Text);
             int zakresDo = int.Parse(textBoxZakresDo.Text);
             g = new Gra(zakresOd, zakresDo);
+            panel_sprawdz.Visible = true;
+            Przerwij.Enabled = true;
+
+        }
+
+        private void Sprawdz_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void TextBoxZakresOd_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void Przerwij_Click(object sender, EventArgs e)
+        {
+            g.Poddaj();
+            Wylosowana.Text = $"Wylosowana: {g.CoBylWylosowane()}";
+            Liczba_ruchow.Text = $"Liczba ruchów: {g.LicznikRuchow}";
+            Laczny_czas_gry.Text = $"Łączny czas gry: "; // do zrobienia timer
+            panel_odpowiedz.Visible = true;
+
+        }
+
+        private void Historia_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

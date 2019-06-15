@@ -22,7 +22,7 @@ namespace ModelGry
             ZakresDo = max;
             wylosowana = Losuj(ZakresOd, ZakresDo);
             Stan = StanGry.Trwa;
-            historia = new List<Ruch>();
+            Historia = new List<Ruch>();
         }
         private int Losuj(int min = 1, int max = 100)
         {
