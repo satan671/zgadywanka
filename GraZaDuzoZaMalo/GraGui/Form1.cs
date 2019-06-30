@@ -35,10 +35,13 @@ namespace GraGui
             groupBoxLosowanie.Visible = true;
             panel_sprawdz.Visible = false;
             panel_odpowiedz.Visible = false;
-            Sprawdz.Enabled = true;
+            buttonSprawdz.Enabled = true;
             buttonLosuj.Enabled = true;
             Odpowiedz.Visible = false;
             textBoxSprawdzana.Text = null;
+            buttonHistoria.Enabled = false;
+            Historia_tresc.Text = null;
+            groupBoxHistoria.Visible = false;
         }
 
         private void buttonLosuj_Click(object sender, EventArgs e)
@@ -49,7 +52,8 @@ namespace GraGui
             int zakresDo = int.Parse(textBoxZakresDo.Text);
             g = new Gra(zakresOd, zakresDo);
             panel_sprawdz.Visible = true;
-            Przerwij.Enabled = true;
+            buttonPrzerwij.Enabled = true;
+            buttonHistoria.Enabled = true;
         }
 
         private void Sprawdz_Click(object sender, EventArgs e)
@@ -82,18 +86,23 @@ namespace GraGui
 
         public void Koniec_gry()
         {
-            Wylosowana.Text = $"Wylosowana: {g.CoBylWylosowane()}";
+            Wylosowana.Text = $"Wylosowana liczba: {g.CoBylWylosowane()}";
             Liczba_ruchow.Text = $"Liczba ruchów: {g.LicznikRuchow}";
             Laczny_czas_gry.Text = $"Łączny czas gry: {g.LicznikCzasu(CzasStart)}";
             panel_odpowiedz.Visible = true;
-            Przerwij.Enabled = false;
-            Sprawdz.Enabled = false;
+            buttonPrzerwij.Enabled = false;
+            buttonSprawdz.Enabled = false;
             buttonLosuj.Enabled = false;
         }
 
         private void Historia_Click(object sender, EventArgs e)
         {
-
+            groupBoxHistoria.Visible = true;
+            Historia_tresc.Text = null;
+            foreach (object historia in g.Historia)
+            {
+                Historia_tresc.Text += Convert.ToString(historia) + "\n";
+            }
         }
 
     }

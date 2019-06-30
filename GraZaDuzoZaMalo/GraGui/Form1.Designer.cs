@@ -35,20 +35,24 @@
             this.textBoxZakresOd = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.Przerwij = new System.Windows.Forms.Button();
-            this.Historia = new System.Windows.Forms.Button();
+            this.buttonPrzerwij = new System.Windows.Forms.Button();
+            this.buttonHistoria = new System.Windows.Forms.Button();
             this.panel_odpowiedz = new System.Windows.Forms.Panel();
             this.Laczny_czas_gry = new System.Windows.Forms.Label();
             this.Liczba_ruchow = new System.Windows.Forms.Label();
             this.Wylosowana = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.Sprawdz = new System.Windows.Forms.Button();
+            this.buttonSprawdz = new System.Windows.Forms.Button();
             this.Odpowiedz = new System.Windows.Forms.Label();
             this.textBoxSprawdzana = new System.Windows.Forms.TextBox();
             this.panel_sprawdz = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.groupBoxHistoria = new System.Windows.Forms.GroupBox();
+            this.Historia_tresc = new System.Windows.Forms.Label();
             this.groupBoxLosowanie.SuspendLayout();
             this.panel_odpowiedz.SuspendLayout();
             this.panel_sprawdz.SuspendLayout();
+            this.groupBoxHistoria.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonNowaGra
@@ -122,42 +126,44 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Zakres Od";
             // 
-            // Przerwij
+            // buttonPrzerwij
             // 
-            this.Przerwij.Enabled = false;
-            this.Przerwij.Location = new System.Drawing.Point(209, 12);
-            this.Przerwij.Name = "Przerwij";
-            this.Przerwij.Size = new System.Drawing.Size(75, 23);
-            this.Przerwij.TabIndex = 2;
-            this.Przerwij.Text = "Przerwij";
-            this.Przerwij.UseVisualStyleBackColor = true;
-            this.Przerwij.Click += new System.EventHandler(this.Przerwij_Click);
+            this.buttonPrzerwij.Enabled = false;
+            this.buttonPrzerwij.Location = new System.Drawing.Point(93, 12);
+            this.buttonPrzerwij.Name = "buttonPrzerwij";
+            this.buttonPrzerwij.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrzerwij.TabIndex = 2;
+            this.buttonPrzerwij.Text = "Przerwij";
+            this.buttonPrzerwij.UseVisualStyleBackColor = true;
+            this.buttonPrzerwij.Click += new System.EventHandler(this.Przerwij_Click);
             // 
-            // Historia
+            // buttonHistoria
             // 
-            this.Historia.Location = new System.Drawing.Point(21, 506);
-            this.Historia.Name = "Historia";
-            this.Historia.Size = new System.Drawing.Size(75, 23);
-            this.Historia.TabIndex = 3;
-            this.Historia.Text = "Historia";
-            this.Historia.UseVisualStyleBackColor = true;
-            this.Historia.Click += new System.EventHandler(this.Historia_Click);
+            this.buttonHistoria.Enabled = false;
+            this.buttonHistoria.Location = new System.Drawing.Point(300, 12);
+            this.buttonHistoria.Name = "buttonHistoria";
+            this.buttonHistoria.Size = new System.Drawing.Size(92, 23);
+            this.buttonHistoria.TabIndex = 3;
+            this.buttonHistoria.Text = "Pokaż Historie";
+            this.buttonHistoria.UseVisualStyleBackColor = true;
+            this.buttonHistoria.Click += new System.EventHandler(this.Historia_Click);
             // 
             // panel_odpowiedz
             // 
+            this.panel_odpowiedz.Controls.Add(this.label4);
             this.panel_odpowiedz.Controls.Add(this.Laczny_czas_gry);
             this.panel_odpowiedz.Controls.Add(this.Liczba_ruchow);
             this.panel_odpowiedz.Controls.Add(this.Wylosowana);
             this.panel_odpowiedz.Location = new System.Drawing.Point(12, 334);
             this.panel_odpowiedz.Name = "panel_odpowiedz";
-            this.panel_odpowiedz.Size = new System.Drawing.Size(272, 81);
+            this.panel_odpowiedz.Size = new System.Drawing.Size(272, 97);
             this.panel_odpowiedz.TabIndex = 5;
             this.panel_odpowiedz.Visible = false;
             // 
             // Laczny_czas_gry
             // 
             this.Laczny_czas_gry.AutoSize = true;
-            this.Laczny_czas_gry.Location = new System.Drawing.Point(6, 10);
+            this.Laczny_czas_gry.Location = new System.Drawing.Point(6, 20);
             this.Laczny_czas_gry.Name = "Laczny_czas_gry";
             this.Laczny_czas_gry.Size = new System.Drawing.Size(84, 13);
             this.Laczny_czas_gry.TabIndex = 2;
@@ -166,7 +172,7 @@
             // Liczba_ruchow
             // 
             this.Liczba_ruchow.AutoSize = true;
-            this.Liczba_ruchow.Location = new System.Drawing.Point(6, 34);
+            this.Liczba_ruchow.Location = new System.Drawing.Point(6, 44);
             this.Liczba_ruchow.Name = "Liczba_ruchow";
             this.Liczba_ruchow.Size = new System.Drawing.Size(76, 13);
             this.Liczba_ruchow.TabIndex = 1;
@@ -175,7 +181,7 @@
             // Wylosowana
             // 
             this.Wylosowana.AutoSize = true;
-            this.Wylosowana.Location = new System.Drawing.Point(6, 57);
+            this.Wylosowana.Location = new System.Drawing.Point(6, 70);
             this.Wylosowana.Name = "Wylosowana";
             this.Wylosowana.Size = new System.Drawing.Size(68, 13);
             this.Wylosowana.TabIndex = 0;
@@ -191,15 +197,15 @@
             this.label3.Text = "Liczba wylosowana. Zgadnij ją!";
             this.label3.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // Sprawdz
+            // buttonSprawdz
             // 
-            this.Sprawdz.Location = new System.Drawing.Point(185, 38);
-            this.Sprawdz.Name = "Sprawdz";
-            this.Sprawdz.Size = new System.Drawing.Size(75, 23);
-            this.Sprawdz.TabIndex = 1;
-            this.Sprawdz.Text = "Sprawdź";
-            this.Sprawdz.UseVisualStyleBackColor = true;
-            this.Sprawdz.Click += new System.EventHandler(this.Sprawdz_Click);
+            this.buttonSprawdz.Location = new System.Drawing.Point(185, 38);
+            this.buttonSprawdz.Name = "buttonSprawdz";
+            this.buttonSprawdz.Size = new System.Drawing.Size(75, 23);
+            this.buttonSprawdz.TabIndex = 1;
+            this.buttonSprawdz.Text = "Sprawdź";
+            this.buttonSprawdz.UseVisualStyleBackColor = true;
+            this.buttonSprawdz.Click += new System.EventHandler(this.Sprawdz_Click);
             // 
             // Odpowiedz
             // 
@@ -222,7 +228,7 @@
             // 
             this.panel_sprawdz.Controls.Add(this.textBoxSprawdzana);
             this.panel_sprawdz.Controls.Add(this.Odpowiedz);
-            this.panel_sprawdz.Controls.Add(this.Sprawdz);
+            this.panel_sprawdz.Controls.Add(this.buttonSprawdz);
             this.panel_sprawdz.Controls.Add(this.label3);
             this.panel_sprawdz.Location = new System.Drawing.Point(12, 209);
             this.panel_sprawdz.Name = "panel_sprawdz";
@@ -230,15 +236,44 @@
             this.panel_sprawdz.TabIndex = 4;
             this.panel_sprawdz.Visible = false;
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(0, -2);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Statystyki";
+            // 
+            // groupBoxHistoria
+            // 
+            this.groupBoxHistoria.Controls.Add(this.Historia_tresc);
+            this.groupBoxHistoria.Location = new System.Drawing.Point(290, 66);
+            this.groupBoxHistoria.Name = "groupBoxHistoria";
+            this.groupBoxHistoria.Size = new System.Drawing.Size(208, 365);
+            this.groupBoxHistoria.TabIndex = 6;
+            this.groupBoxHistoria.TabStop = false;
+            this.groupBoxHistoria.Text = "Historia";
+            this.groupBoxHistoria.Visible = false;
+            // 
+            // Historia_tresc
+            // 
+            this.Historia_tresc.AutoSize = true;
+            this.Historia_tresc.Location = new System.Drawing.Point(7, 20);
+            this.Historia_tresc.Name = "Historia_tresc";
+            this.Historia_tresc.Size = new System.Drawing.Size(0, 13);
+            this.Historia_tresc.TabIndex = 0;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(296, 541);
+            this.ClientSize = new System.Drawing.Size(507, 442);
+            this.Controls.Add(this.groupBoxHistoria);
             this.Controls.Add(this.panel_odpowiedz);
             this.Controls.Add(this.panel_sprawdz);
-            this.Controls.Add(this.Historia);
-            this.Controls.Add(this.Przerwij);
+            this.Controls.Add(this.buttonHistoria);
+            this.Controls.Add(this.buttonPrzerwij);
             this.Controls.Add(this.groupBoxLosowanie);
             this.Controls.Add(this.buttonNowaGra);
             this.Name = "Form1";
@@ -249,6 +284,8 @@
             this.panel_odpowiedz.PerformLayout();
             this.panel_sprawdz.ResumeLayout(false);
             this.panel_sprawdz.PerformLayout();
+            this.groupBoxHistoria.ResumeLayout(false);
+            this.groupBoxHistoria.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -262,17 +299,20 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button buttonLosuj;
-        private System.Windows.Forms.Button Przerwij;
-        private System.Windows.Forms.Button Historia;
+        private System.Windows.Forms.Button buttonPrzerwij;
+        private System.Windows.Forms.Button buttonHistoria;
         private System.Windows.Forms.Panel panel_odpowiedz;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button Sprawdz;
+        private System.Windows.Forms.Button buttonSprawdz;
         private System.Windows.Forms.Label Odpowiedz;
         private System.Windows.Forms.TextBox textBoxSprawdzana;
         private System.Windows.Forms.Panel panel_sprawdz;
         private System.Windows.Forms.Label Wylosowana;
         private System.Windows.Forms.Label Liczba_ruchow;
         private System.Windows.Forms.Label Laczny_czas_gry;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.GroupBox groupBoxHistoria;
+        private System.Windows.Forms.Label Historia_tresc;
     }
 }
 
