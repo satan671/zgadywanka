@@ -59,5 +59,15 @@ namespace ModelGry
             else
                 return null;
         }
+        public string LicznikCzasu(DateTime CzasStart)
+        {
+            DateTime ObecnyCzas = DateTime.Now;
+            TimeSpan CzasGry = ObecnyCzas - CzasStart;
+            double godziny = CzasGry.Hours;
+            double minuty = CzasGry.Minutes;
+            double sekundy = CzasGry.Seconds;
+            string czas = $"{godziny}:{minuty}:{sekundy}";
+            return czas;
+        }
     }
 }

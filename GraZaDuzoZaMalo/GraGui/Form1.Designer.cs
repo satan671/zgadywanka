@@ -210,7 +210,6 @@
             this.Odpowiedz.TabIndex = 3;
             this.Odpowiedz.Text = "Odpowiedź";
             this.Odpowiedz.Visible = false;
-            this.Odpowiedz.Click += new System.EventHandler(this.Odpowiedz_Click);
             // 
             // textBoxSprawdzana
             // 

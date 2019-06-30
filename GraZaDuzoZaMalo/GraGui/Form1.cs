@@ -43,24 +43,19 @@ namespace GraGui
 
         private void buttonLosuj_Click(object sender, EventArgs e)
         {
-            DateTime CzasStart = DateTime.Now;
+            CzasStart = DateTime.Now;
             //try-catch
             int zakresOd = int.Parse(textBoxZakresOd.Text);
             int zakresDo = int.Parse(textBoxZakresDo.Text);
             g = new Gra(zakresOd, zakresDo);
             panel_sprawdz.Visible = true;
             Przerwij.Enabled = true;
-
         }
 
         private void Sprawdz_Click(object sender, EventArgs e)
         {
             int sprawdzana2 = int.Parse(textBoxSprawdzana.Text);
             Odpowiedz.Text = Convert.ToString(g.Ocena(sprawdzana2));
-            // g.Ocena(sprawdzana);
-
-
-
             if ((Odpowiedz.Text == "ZaDużo")|| (Odpowiedz.Text == "ZaMało"))
                 Odpowiedz.ForeColor = Color.Red;
             else
@@ -69,7 +64,6 @@ namespace GraGui
                 Koniec_gry();
             }
             Odpowiedz.Visible = true;
-
         }
 
         private void TextBoxZakresOd_TextChanged(object sender, EventArgs e)
@@ -88,11 +82,9 @@ namespace GraGui
 
         public void Koniec_gry()
         {
-            DateTime CzasStop = DateTime.Now;
-            TimeSpan CzasGry = (CzasStop - CzasStart);
             Wylosowana.Text = $"Wylosowana: {g.CoBylWylosowane()}";
             Liczba_ruchow.Text = $"Liczba ruchów: {g.LicznikRuchow}";
-            Laczny_czas_gry.Text = $"Łączny czas gry: {CzasGry}"; // do poprawienia
+            Laczny_czas_gry.Text = $"Łączny czas gry: {g.LicznikCzasu(CzasStart)}";
             panel_odpowiedz.Visible = true;
             Przerwij.Enabled = false;
             Sprawdz.Enabled = false;
@@ -100,11 +92,6 @@ namespace GraGui
         }
 
         private void Historia_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Odpowiedz_Click(object sender, EventArgs e)
         {
 
         }
