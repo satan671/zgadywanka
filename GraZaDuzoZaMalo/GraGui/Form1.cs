@@ -40,6 +40,7 @@ namespace GraGui
             Odpowiedz.Visible = false;
             textBoxSprawdzana.Text = null;
             buttonHistoria.Enabled = false;
+            buttonPrzerwij.Enabled = false;
             Historia_tresc.Text = null;
             groupBoxHistoria.Visible = false;
         }
@@ -105,5 +106,9 @@ namespace GraGui
             }
         }
 
+        private void ButtonInfo_Click(object sender, EventArgs e)
+        {
+            new AboutBox1().Show();
+        }
     }
 }

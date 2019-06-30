@@ -38,6 +38,7 @@
             this.buttonPrzerwij = new System.Windows.Forms.Button();
             this.buttonHistoria = new System.Windows.Forms.Button();
             this.panel_odpowiedz = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
             this.Laczny_czas_gry = new System.Windows.Forms.Label();
             this.Liczba_ruchow = new System.Windows.Forms.Label();
             this.Wylosowana = new System.Windows.Forms.Label();
@@ -46,9 +47,9 @@
             this.Odpowiedz = new System.Windows.Forms.Label();
             this.textBoxSprawdzana = new System.Windows.Forms.TextBox();
             this.panel_sprawdz = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
             this.groupBoxHistoria = new System.Windows.Forms.GroupBox();
             this.Historia_tresc = new System.Windows.Forms.Label();
+            this.buttonInfo = new System.Windows.Forms.Button();
             this.groupBoxLosowanie.SuspendLayout();
             this.panel_odpowiedz.SuspendLayout();
             this.panel_sprawdz.SuspendLayout();
@@ -129,7 +130,7 @@
             // buttonPrzerwij
             // 
             this.buttonPrzerwij.Enabled = false;
-            this.buttonPrzerwij.Location = new System.Drawing.Point(93, 12);
+            this.buttonPrzerwij.Location = new System.Drawing.Point(105, 12);
             this.buttonPrzerwij.Name = "buttonPrzerwij";
             this.buttonPrzerwij.Size = new System.Drawing.Size(75, 23);
             this.buttonPrzerwij.TabIndex = 2;
@@ -142,7 +143,7 @@
             this.buttonHistoria.Enabled = false;
             this.buttonHistoria.Location = new System.Drawing.Point(300, 12);
             this.buttonHistoria.Name = "buttonHistoria";
-            this.buttonHistoria.Size = new System.Drawing.Size(92, 23);
+            this.buttonHistoria.Size = new System.Drawing.Size(91, 23);
             this.buttonHistoria.TabIndex = 3;
             this.buttonHistoria.Text = "Pokaż Historie";
             this.buttonHistoria.UseVisualStyleBackColor = true;
@@ -159,6 +160,15 @@
             this.panel_odpowiedz.Size = new System.Drawing.Size(272, 97);
             this.panel_odpowiedz.TabIndex = 5;
             this.panel_odpowiedz.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(0, -2);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 13);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Statystyki";
             // 
             // Laczny_czas_gry
             // 
@@ -236,15 +246,6 @@
             this.panel_sprawdz.TabIndex = 4;
             this.panel_sprawdz.Visible = false;
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(0, -2);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 13);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Statystyki";
-            // 
             // groupBoxHistoria
             // 
             this.groupBoxHistoria.Controls.Add(this.Historia_tresc);
@@ -264,11 +265,22 @@
             this.Historia_tresc.Size = new System.Drawing.Size(0, 13);
             this.Historia_tresc.TabIndex = 0;
             // 
+            // buttonInfo
+            // 
+            this.buttonInfo.Location = new System.Drawing.Point(408, 12);
+            this.buttonInfo.Name = "buttonInfo";
+            this.buttonInfo.Size = new System.Drawing.Size(87, 23);
+            this.buttonInfo.TabIndex = 7;
+            this.buttonInfo.Text = "Info";
+            this.buttonInfo.UseVisualStyleBackColor = true;
+            this.buttonInfo.Click += new System.EventHandler(this.ButtonInfo_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(507, 442);
+            this.Controls.Add(this.buttonInfo);
             this.Controls.Add(this.groupBoxHistoria);
             this.Controls.Add(this.panel_odpowiedz);
             this.Controls.Add(this.panel_sprawdz);
@@ -277,7 +289,7 @@
             this.Controls.Add(this.groupBoxLosowanie);
             this.Controls.Add(this.buttonNowaGra);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Gra: ZaDuzoZaMalo";
             this.groupBoxLosowanie.ResumeLayout(false);
             this.groupBoxLosowanie.PerformLayout();
             this.panel_odpowiedz.ResumeLayout(false);
@@ -313,6 +325,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.GroupBox groupBoxHistoria;
         private System.Windows.Forms.Label Historia_tresc;
+        private System.Windows.Forms.Button buttonInfo;
     }
 }
 
