@@ -38,14 +38,14 @@
             this.Przerwij = new System.Windows.Forms.Button();
             this.Historia = new System.Windows.Forms.Button();
             this.panel_odpowiedz = new System.Windows.Forms.Panel();
+            this.Laczny_czas_gry = new System.Windows.Forms.Label();
+            this.Liczba_ruchow = new System.Windows.Forms.Label();
+            this.Wylosowana = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.Sprawdz = new System.Windows.Forms.Button();
             this.Odpowiedz = new System.Windows.Forms.Label();
             this.textBoxSprawdzana = new System.Windows.Forms.TextBox();
             this.panel_sprawdz = new System.Windows.Forms.Panel();
-            this.Wylosowana = new System.Windows.Forms.Label();
-            this.Liczba_ruchow = new System.Windows.Forms.Label();
-            this.Laczny_czas_gry = new System.Windows.Forms.Label();
             this.groupBoxLosowanie.SuspendLayout();
             this.panel_odpowiedz.SuspendLayout();
             this.panel_sprawdz.SuspendLayout();
@@ -154,6 +154,33 @@
             this.panel_odpowiedz.TabIndex = 5;
             this.panel_odpowiedz.Visible = false;
             // 
+            // Laczny_czas_gry
+            // 
+            this.Laczny_czas_gry.AutoSize = true;
+            this.Laczny_czas_gry.Location = new System.Drawing.Point(6, 10);
+            this.Laczny_czas_gry.Name = "Laczny_czas_gry";
+            this.Laczny_czas_gry.Size = new System.Drawing.Size(84, 13);
+            this.Laczny_czas_gry.TabIndex = 2;
+            this.Laczny_czas_gry.Text = "Łączny czas gry";
+            // 
+            // Liczba_ruchow
+            // 
+            this.Liczba_ruchow.AutoSize = true;
+            this.Liczba_ruchow.Location = new System.Drawing.Point(6, 34);
+            this.Liczba_ruchow.Name = "Liczba_ruchow";
+            this.Liczba_ruchow.Size = new System.Drawing.Size(76, 13);
+            this.Liczba_ruchow.TabIndex = 1;
+            this.Liczba_ruchow.Text = "Liczba ruchów";
+            // 
+            // Wylosowana
+            // 
+            this.Wylosowana.AutoSize = true;
+            this.Wylosowana.Location = new System.Drawing.Point(6, 57);
+            this.Wylosowana.Name = "Wylosowana";
+            this.Wylosowana.Size = new System.Drawing.Size(68, 13);
+            this.Wylosowana.TabIndex = 0;
+            this.Wylosowana.Text = "Wylosowana";
+            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -182,6 +209,8 @@
             this.Odpowiedz.Size = new System.Drawing.Size(60, 13);
             this.Odpowiedz.TabIndex = 3;
             this.Odpowiedz.Text = "Odpowiedź";
+            this.Odpowiedz.Visible = false;
+            this.Odpowiedz.Click += new System.EventHandler(this.Odpowiedz_Click);
             // 
             // textBoxSprawdzana
             // 
@@ -201,33 +230,6 @@
             this.panel_sprawdz.Size = new System.Drawing.Size(272, 100);
             this.panel_sprawdz.TabIndex = 4;
             this.panel_sprawdz.Visible = false;
-            // 
-            // Wylosowana
-            // 
-            this.Wylosowana.AutoSize = true;
-            this.Wylosowana.Location = new System.Drawing.Point(6, 57);
-            this.Wylosowana.Name = "Wylosowana";
-            this.Wylosowana.Size = new System.Drawing.Size(68, 13);
-            this.Wylosowana.TabIndex = 0;
-            this.Wylosowana.Text = "Wylosowana";
-            // 
-            // Liczba_ruchow
-            // 
-            this.Liczba_ruchow.AutoSize = true;
-            this.Liczba_ruchow.Location = new System.Drawing.Point(6, 34);
-            this.Liczba_ruchow.Name = "Liczba_ruchow";
-            this.Liczba_ruchow.Size = new System.Drawing.Size(76, 13);
-            this.Liczba_ruchow.TabIndex = 1;
-            this.Liczba_ruchow.Text = "Liczba ruchów";
-            // 
-            // Laczny_czas_gry
-            // 
-            this.Laczny_czas_gry.AutoSize = true;
-            this.Laczny_czas_gry.Location = new System.Drawing.Point(6, 10);
-            this.Laczny_czas_gry.Name = "Laczny_czas_gry";
-            this.Laczny_czas_gry.Size = new System.Drawing.Size(84, 13);
-            this.Laczny_czas_gry.TabIndex = 2;
-            this.Laczny_czas_gry.Text = "Łączny czas gry";
             // 
             // Form1
             // 

@@ -14,7 +14,7 @@ namespace GraGui
     public partial class Form1 : Form
     {
         private Gra g;
-        DateTime CzasStart = DateTime.Now;
+        private DateTime CzasStart;
         public Form1()
         {
             InitializeComponent();
@@ -33,9 +33,15 @@ namespace GraGui
         private void buttonNowaGra_Click(object sender, EventArgs e)
         {
             groupBoxLosowanie.Visible = true;
+            panel_sprawdz.Visible = false;
+            panel_odpowiedz.Visible = false;
+            Sprawdz.Enabled = true;
+            buttonLosuj.Enabled = true;
+            Odpowiedz.Visible = false;
+            textBoxSprawdzana.Text = null;
         }
 
-        public void buttonLosuj_Click(object sender, EventArgs e)
+        private void buttonLosuj_Click(object sender, EventArgs e)
         {
             DateTime CzasStart = DateTime.Now;
             //try-catch
@@ -49,13 +55,21 @@ namespace GraGui
 
         private void Sprawdz_Click(object sender, EventArgs e)
         {
-            int sprawdzana = int.Parse(textBoxSprawdzana.Text);
-           // g.Ocena(sprawdzana);
+            int sprawdzana2 = int.Parse(textBoxSprawdzana.Text);
+            Odpowiedz.Text = Convert.ToString(g.Ocena(sprawdzana2));
+            // g.Ocena(sprawdzana);
 
 
 
-            Odpowiedz.Text = $"Odpowiedź: {g.Ocena(sprawdzana)}"; // do zrobienia odpowiedź
-            
+            if ((Odpowiedz.Text == "ZaDużo")|| (Odpowiedz.Text == "ZaMało"))
+                Odpowiedz.ForeColor = Color.Red;
+            else
+            {
+                Odpowiedz.ForeColor = Color.Green;
+                Koniec_gry();
+            }
+            Odpowiedz.Visible = true;
+
         }
 
         private void TextBoxZakresOd_TextChanged(object sender, EventArgs e)
@@ -65,9 +79,11 @@ namespace GraGui
 
         private void Przerwij_Click(object sender, EventArgs e)
         {
+            Odpowiedz.Text = "Poddana";
+            Odpowiedz.ForeColor = Color.Red;
+            Odpowiedz.Visible = true;
             g.Poddaj();
             Koniec_gry();
-
         }
 
         public void Koniec_gry()
@@ -78,9 +94,17 @@ namespace GraGui
             Liczba_ruchow.Text = $"Liczba ruchów: {g.LicznikRuchow}";
             Laczny_czas_gry.Text = $"Łączny czas gry: {CzasGry}"; // do poprawienia
             panel_odpowiedz.Visible = true;
+            Przerwij.Enabled = false;
+            Sprawdz.Enabled = false;
+            buttonLosuj.Enabled = false;
         }
 
         private void Historia_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Odpowiedz_Click(object sender, EventArgs e)
         {
 
         }

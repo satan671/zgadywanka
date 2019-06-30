@@ -6,7 +6,7 @@ namespace ModelGry
     public partial class Gra
     {
         // typy
-        public enum Odp { ZaMało=-1, Trafiono=0, ZaDuzo=+1};
+        public enum Odp { ZaMało=-1, Trafiono=0, ZaDużo=+1};
         public enum StanGry { Trwa, Poddana, Odgadnieta };
         // pola
         private readonly int wylosowana;
@@ -38,10 +38,12 @@ namespace ModelGry
             if (propozycja < wylosowana)
                 odp = Odp.ZaMało;
             else if (propozycja > wylosowana)
-                odp = Odp.ZaDuzo;
+                odp = Odp.ZaDużo;
             else // ==
+            {
                 Stan = StanGry.Odgadnieta;
-            odp = Odp.Trafiono;
+                odp = Odp.Trafiono;
+            }
             Historia.Add(new Ruch(propozycja, odp));
             return odp;
         }
